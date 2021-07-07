@@ -4,9 +4,9 @@ This page will guide you to build out your AWS environment using some best pract
 ## Setup your VPC 
 Before you can deploy any EC2 instances, you will need to deploy a VPC or [Virtual Private Cloud](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) in your environment.
 
-## VPC CloudFormation Template
+# VPC CloudFormation Template
 
-![Architecture](https://github.com/criblio/aws-quickstart-cribl-logstream/tree/main/architecture/vpc_create_sqs_s3_cribl_design.png)
+![Architecture](https://github.com/criblio/aws-quickstart-cribl-logstream/blob/main/architecture/vpc_create_sqs_s3_cribl_design.png)
 
 ### Step 1 - Create VPC 
 Click on the following CloudFormation template to create a VPC within your AWS Regional Deployment: 
@@ -30,8 +30,8 @@ Here is what the completed CloudFormation screen should look like:
 
 -------------
 
-## Collect CloudTrail Data from S3
-![Architecture](/architecture/cloudtrail_cf_template_design.png)
+# Collect CloudTrail Data from S3
+![Architecture](https://github.com/criblio/aws-quickstart-cribl-logstream/blob/main/architecture/cloudtrail_cf_template_design.png)
 
 This quick link will enable a new CloudTrail (cribl-cloudtrail-sqs-s3-Trail-`<uniqueID>`), create an S3 bucket where the CloudTrail events will land. An SQS will also be created with the appropriate policy to allow events from S3 to be sent into this SQS: 
 - [US East 1](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https%3A%2F%2Fquickstart-cribl-logstream.s3.amazonaws.com%2Fcftemplates%2Fcloudtrail-s3%252Bsqs.yaml&stackName=cribl-cloudtrail-sqs-s3&param_CloudWatchLogsRetentionInDays=7&param_ExternalTrailBucket=&param_LogFilePrefix=&param_ParentAlertStack=&param_PermissionsBoundary=&param_S3DataEvents=true&param_SQS=cribl-sqs-cloudtrail)
@@ -57,8 +57,12 @@ Here is what the completed CloudFormation screen should look like:
 
 ### Setup VPC Flow Logs
 
-[Setup VPC Flow Logs and S3 collction](vpcflowlogs2metrics.md)
+[Setup VPC Flow Logs and S3 collction](https://github.com/criblio/aws-quickstart-cribl-logstream/blob/main/steps/vpcflowlogs2metrics.md)
 
 ### Setup CloudTrail Logs
 
-[Setup CloudTrail Logs and S3 collection](cloudtrail.md)
+[Setup CloudTrail Logs and S3 collection](https://github.com/criblio/aws-quickstart-cribl-logstream/blob/main/steps/cloudtrail.md)
+
+### Setup CloudWatch Streaming Metrics
+
+[Setup CloudWatch Streaming Metrics](https://github.com/criblio/aws-quickstart-cribl-logstream/blob/main/steps/cloudwatchmetrics.md)
