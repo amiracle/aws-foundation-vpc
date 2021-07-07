@@ -25,11 +25,9 @@ Once your VPC has been created, can click here and it will send the VPC Flow log
 
 > This CloudFormation Template will continue where the first CloudFormation template used to create the initial VPC left off and will enable VPC Flow Logs and have them write to an S3 bucket. The S3 bucket will have events enabled to trigger an SQS which will be used by Cribl LogStream to pull VPC Flow data.
 
-Here is what the completed CloudFormation screen should look like:
-![Complete VPC Flow](https://github.com/criblio/aws-quickstart-cribl-logstream/blob/main/screenshots/s3bucket/vpcflow/vpc-data-collection.png)
 
 ## Continue to Cribl LogStream Use Cases :
 
 ### Setup VPC Flow Logs
 
-[Setup VPC Flow Logs and S3 collction](https://github.com/criblio/aws-quickstart-cribl-logstream/blob/main/steps/vpcflowlogs2metrics.md)
+- [Setup VPC Flow Logs and S3 collction](https://github.com/criblio/aws-quickstart-cribl-logstream/blob/main/steps/vpcflowlogs2metrics.md)
